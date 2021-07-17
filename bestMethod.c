@@ -3,7 +3,7 @@
 #include <stdbool.h>
 #include <time.h>
 
-#define PRIME_LIMIT 1000
+#define PRIME_LIMIT 2000000
 
 // Quick function to check that the code works.
 void isPrime(int num);
@@ -36,23 +36,23 @@ void getPrimes() {
     
     bool primes[PRIME_LIMIT];
     
-    for(int i = 2;i < PRIME_LIMIT;i++) {
+    for(int i = 3;i < PRIME_LIMIT;i += 2) {
         primes[i] = true;
     }
     
     primes[0] = false;
     primes[1] = false;
     
-    int primeNumbers[11] = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31};
+    int primeNumbers[10] = {3, 5, 7, 11, 13, 17, 19, 23, 29, 31};
     
-    for(int i = 0;i < 11;i++) {
+    for(int i = 0;i < 10;i++) {
         
-        for(int j = 2;primeNumbers[i] * j < PRIME_LIMIT;j++) {
+        for(int j = 3;primeNumbers[i] * j < PRIME_LIMIT;j += 2) {
             primes[primeNumbers[i] * j] = false;
         }
     }
     
-    for(int i = 2;i < PRIME_LIMIT;i++) {
+    for(int i = 3;i < PRIME_LIMIT;i += 2) {
         //printf("%d - %s\n", i, primes[i] ? "true" : "false"); // Cool way of printing true/false for booleans.
         
         if(primes[i]) {
