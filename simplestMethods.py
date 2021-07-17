@@ -16,7 +16,7 @@ def good(num):
         #print(f"{num} = Composite")
         return False
     
-    for i in range(2, int(math.sqrt(num)), 2):
+    for i in range(3, int(math.sqrt(num)), 2):
         if num % i == 0:
             #print(f"{num} = Composite")
             return False
