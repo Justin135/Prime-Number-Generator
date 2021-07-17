@@ -26,7 +26,7 @@ This implementation uses a process of elimination to determine a list of prime n
 
 - Create an array of booleans that is the size of the upper limit called `primes`. True means the corresponding index is a prime number, while `false` means composite.
 - Initialize the array so that all values are true (except for index 0 and 1).
-- Take all known prime numbers `p` where `p<sup>2</sup> <= the upper limit`.
+- Take all known prime numbers `p` where p<sup>2</sup> `<= the upper limit`.
 - Take the multiples of these prime numbers and set each corresponding index in `primes` to false.
 - All remaining true values of `primes` will be prime numbers.
 
