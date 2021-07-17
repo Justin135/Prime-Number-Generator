@@ -2,7 +2,7 @@
 
 This repository contains different implementations of finding prime numbers up to an upper limit. Below are the different approaches explained.
 
-##1. Basic factor looping
+## 1. Basic factor looping
 
 This implementation is usually the go-to algorithm for finding if a number is prime or composite. The code will loop through the numbers 2 to `num - 1` and check if each value is a factor of the original number. If so, it outputs false and exits the function. If not, then it skips to the next iteration.
 
@@ -20,7 +20,7 @@ It is easy to make it more efficient by skipping all even numbers (except for 2)
 
 This implementation is illustrated in both *simplestMethods.py* and *listOfPrimes.py*. The file *simplestMethods.py* illustrates the time difference of the two algorithms, while the file *listOfPrimes.py* actually implements the efficient method to find and output the list of all prime numbers up to a million in a text file.
 
-##2. Sieve of Eratosthenes
+## 2. Sieve of Eratosthenes
 
 This implementation uses a process of elimination to determine a list of prime numbers up to an upper limit. Here's how:
 
