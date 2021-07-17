@@ -57,7 +57,7 @@ void getPrimes() {
         
         if(primes[i]) {
             fprintf(f, "%d\n", i);
-            isPrime(i);
+            //isPrime(i);
         }
     }
     
