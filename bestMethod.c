@@ -148,7 +148,7 @@ void getPrimes() {
         for(int i = 1;i < PRIME_2LIMIT;i += 2) {
             primes2[i] = true;
         }
-        
+        /*
         for(int i = 0;pow(primeNumbers3[i], 2) < (PRIME_2LIMIT * (k + 1));i++) {
             printf("Good.%d\n", i);
             for(int j = 1;primeMultiples2[i] * (primeNumbers3[i] * j) < (PRIME_2LIMIT * (k + 1));j += 2) {
@@ -156,6 +156,7 @@ void getPrimes() {
                 primes2[(primeMultiples2[i] * (primeNumbers3[i] * j)) - (PRIME_2LIMIT * k)] = false;
             }
         }
+        */
         
         puts("Good.");
         /*
