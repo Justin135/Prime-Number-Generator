@@ -11,8 +11,9 @@ def sieve(n):
                 primes[j] = False
     
     f = open("pythonSievePrimes.txt", "w")
+    f.write("2\n")
     
-    for i in range(2, n + 1):
+    for i in range(3, n + 1, 2):
         
         if primes[i]:
             f.write(str(i) + "\n")
