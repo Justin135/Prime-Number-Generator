@@ -2,8 +2,9 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include <time.h>
+#include <math.h>
 
-#define LIMIT 1000000000
+#define LIMIT 10000000
 #define BITS 32
 #define SetBit(A,k)     ( A[(k / 32)] |= (1 << (k % 32)) ) // Go to index k / 32, then shift 1 k % 32 times.
 #define GetBit(A,k)     ( A[(k / 32)] & (1 << (k % 32)) )
@@ -23,7 +24,9 @@ void efficientMemoryPrimes(int limit) {
         return;
     }
     
-    for(unsigned long long int i = 3;i < limit;i += 2) {
+    long long int upper = sqrt(limit);
+    
+    for(unsigned long long int i = 3;i < upper;i += 2) {
         
         if(!GetBit(primes, i)) {
             
