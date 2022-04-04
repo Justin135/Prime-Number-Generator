@@ -33,3 +33,5 @@ This implementation uses a process of elimination to determine a list of prime n
 The time complexity of the Sieve of Eratosthenes is O(N log (log N)), which is incredibly efficient.
 
 **Note:** this implementation is mainly dependent on RAM, so finding a list with a large upper limit will use an incredible amount of RAM. Python booleans use 24 bytes for some reason. That is why for this implementation, I use the C language since each bool is only one byte (as it should be).
+
+To further increase storage efficiency, in the file _secondSieveAttempt.c_, I used bitshifting in an integer array so each boolean can be represented as only one bit instead of one byte, octupling the upper limit for any given amount of RAM.
