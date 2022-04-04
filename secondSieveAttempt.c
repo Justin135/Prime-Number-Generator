@@ -4,7 +4,7 @@
 #include <time.h>
 #include <math.h>
 
-#define LIMIT 10000000
+#define LIMIT 10e6
 #define BITS 32
 #define SetBit(A,k)     ( A[(k / 32)] |= (1 << (k % 32)) ) // Go to index k / 32, then shift 1 k % 32 times.
 #define GetBit(A,k)     ( A[(k / 32)] & (1 << (k % 32)) )
@@ -27,7 +27,7 @@ void efficientMemoryPrimes(int limit) {
     long long int upper = sqrt(limit);
     
     for(unsigned long long int i = 3;i < upper;i += 2) {
-        
+        //if(i > 10 && i % 10 == 5) continue;
         if(!GetBit(primes, i)) {
             
             for(int j = 3;(i * j) < limit;j += 2) {
@@ -52,7 +52,7 @@ void efficientMemoryPrimes(int limit) {
     free(primes);
     
     clock_t diff = clock() - start;
-    printf("Timed: %g\n", (diff / CLOCKS_PER_SEC));
+    printf("Timed: %fs\n", ((double) diff / CLOCKS_PER_SEC));
 }
 
 void getPrimes(int limit);
